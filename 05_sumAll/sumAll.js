@@ -5,8 +5,9 @@ const sumAll = function(start, end) {
             sum = sum + i;
         };  
     }
-    else if (start <= 0 || end <= 0) {
-        sum = "ERROR"
+    else if ((start <= 0) || (end <= 0) || (start % 1 != 0) || (end % 1 != 0) ||
+    (typeof start !== 'number') || (typeof end !== 'number')) {
+        sum = "ERROR";
     }
     else {
         for (let i = start; i <= end; i++) {
